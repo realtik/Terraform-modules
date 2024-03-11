@@ -35,7 +35,7 @@ output "private-subnet-3_id" {
 output "private-subnet-4_id" {
   value = aws_subnet.private-subnet-4.id
 }
-
+/*
 #################PRIVATE ROUTE TABLE ID ############################
 output "private_route_table1_id" {
   value = aws_route_table.private-route-table-1.id
@@ -45,3 +45,4 @@ output "private_route_table1_id" {
 output "private_route_table2_id" {
   value = aws_route_table.private-route-table-2.id
 }
+*/

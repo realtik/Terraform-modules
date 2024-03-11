@@ -1,4 +1,4 @@
-provider "aws" {
+/*provider "aws" {
   region  = "eu-west-3"
   profile = "terraform-user"
 }
@@ -38,4 +38,4 @@ module "EC2" {
   private_subnet2_id = module.network.private-subnet-2_id
   rds-security-group_config = var.rds-security-group_config
   rds_instance_config = var.rds_instance_config
-}
+}*/
