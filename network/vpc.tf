@@ -116,7 +116,7 @@ resource "aws_subnet" "private-subnet-4" {
 }
 
 ################ ELASTIC IP #################
-
+/*
 resource "aws_eip" "eip-for-nat-gateway-1" {
   domain = var.eip_natgateway1_config.domain 
 
@@ -136,7 +136,7 @@ resource "aws_eip" "eip-for-nat-gateway-1" {
 }*/
 
 ################# NAT GATEWAY #########################
-
+/*
 resource "aws_nat_gateway" "nat-gateway-1" {
   allocation_id = aws_eip.eip-for-nat-gateway-1.id
   subnet_id     = aws_subnet.public-subnet-1.id
@@ -145,7 +145,7 @@ resource "aws_nat_gateway" "nat-gateway-1" {
     Name = "Terra Nat Gateway Public Subnet 1"
   }
 }
-
+*/
 /*
 resource "aws_nat_gateway" "nat-gateway-2" {
   allocation_id = aws_eip.eip-for-nat-gateway-2.id
@@ -157,7 +157,7 @@ resource "aws_nat_gateway" "nat-gateway-2" {
 }*/
 
 ################ PRIVATE ROUTE TABLE 1 #######################
-
+/*
 resource "aws_route_table" "private-route-table-1" {
   vpc_id            = aws_vpc.vpc.id
 
@@ -170,7 +170,7 @@ resource "aws_route_table" "private-route-table-1" {
     Name = "Terra Private Route Table 1"
   }
 }
-
+*/
 ################ PRIVATE ROUTE TABLE 2 #######################
 /*
 resource "aws_route_table" "private-route-table-2" {
@@ -188,7 +188,7 @@ resource "aws_route_table" "private-route-table-2" {
 */
 
 #################### ROUTE TABLE ASSOCIATION ######################
-
+/*
 resource "aws_route_table_association" "private-subnet-1-route-table-association" {
   subnet_id = aws_subnet.private-subnet-1.id
   route_table_id = aws_route_table.private-route-table-1.id
@@ -198,7 +198,7 @@ resource "aws_route_table_association" "private-subnet-3-route-table-association
   subnet_id = aws_subnet.private-subnet-3.id
   route_table_id = aws_route_table.private-route-table-1.id
 }*/
-
+/*
 resource "aws_route_table_association" "private-subnet-2-route-table-association" {
   subnet_id = aws_subnet.private-subnet-2.id
   route_table_id = aws_route_table.private-route-table-1.id
