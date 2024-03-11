@@ -64,34 +64,3 @@ variable "pvt_subnet4_config" {
     map_public_ip_on_launch = string
   })
 }
-/*
-################# elastic IP ##############
-variable "eip_natgateway1_config" {
-  type = object({
-    domain = string
-  })
-}
-
-variable "eip_natgateway2_config" {
-  type = object({
-    domain = string
-  })
-}
-
-####################### PRIVATE RTE TABLE 1 ###########
-
-variable "private_route_table1_config" {
-  type = object({
-    cidr_block = string
-  })
-} 
-
-####################### PRIVATE RTE TABLE 2 ###########
-
-variable "private_route_table2_config" {
-  type = object({
-    cidr_block = string
-  })
-} 
-*/
-#################### ROUTE TABLE ASSOCIATION ######################
