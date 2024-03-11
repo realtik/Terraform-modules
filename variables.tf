@@ -67,20 +67,20 @@ variable "pvt_subnet4_config" {
 }
 
 ################# elastic IP ##############
-
+/*
 variable "eip_natgateway1_config" {
   type = object({
     domain = string
   })
 }
 
-/*
+
 variable "eip_natgateway2_config" {
   type = object({
     domain = string
   })
 }
-*/
+
 ####################### PRIVATE RTE TABLE 1 ###########
 
 variable "private_route_table1_config" {
@@ -90,18 +90,18 @@ variable "private_route_table1_config" {
 }
 
 ####################### PRIVATE RTE TABLE 2 ###########
-/*
+
 variable "private_route_table2_config" {
   type = object({
     cidr_block = string
   })
-}*/
+}
 
 
 #################### ROUTE TABLE ASSOCIATION ######################
 
 #################### SECURITY GORUPS #######################
-/*
+
 variable "alb-security-group_config" {
   type = object({
     name        = string
@@ -128,7 +128,7 @@ variable "alb-security-group_config" {
 
   })
 }
-*/
+
 variable "ssh-security-group_config" {
   type = object({
     name        = string
@@ -154,7 +154,7 @@ variable "ssh-security-group_config" {
 
   })
 }
-/*
+
 variable "webserver-security-group_config" {
   type = object({
     name        = string
@@ -202,7 +202,7 @@ variable "database-security-group_config" {
 
   })
 }
-*/
+
 
 
 ######### RDS ET SG RDS#############################
@@ -243,3 +243,4 @@ variable "rds-security-group_config" {
 
   })
 }
+*/
