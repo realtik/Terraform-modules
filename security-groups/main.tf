@@ -69,7 +69,7 @@ resource "aws_security_group" "webserver-security-group" {
     from_port        = var.webserver-security-group_config.ingress_from_port
     to_port          = var.webserver-security-group_config.ingress_to_port
     protocol         = var.webserver-security-group_config.ingress_protocol
-    security_groups  = [aws_security_group.alb-security-group.id]
+    security_groups  = [aws_security_group.alb-security_group.id]
   }
 
   ingress {
@@ -77,7 +77,7 @@ resource "aws_security_group" "webserver-security-group" {
     from_port        = var.webserver-security-group_config.ingress2_from_port
     to_port          = var.webserver-security-group_config.ingress2_to_port
     protocol         = var.webserver-security-group_config.ingress2_protocol
-    security_groups  = [aws_security_group.alb-security-group.id]
+    security_groups  = [aws_security_group.alb-security_group.id]
   }
 
   egress {
@@ -113,7 +113,7 @@ ingress {
     from_port        = var.database-security-group_config.ingress2_from_port
     to_port          = var.database-security-group_config.ingress2_to_port
     protocol         = var.database-security-group_config.ingress2_protocol
-    security_groups  = [aws_security_group.bastion_security_group.id]
+    security_groups  = [aws_security_group.bastion-security_group.id]
   }
 
   egress {
