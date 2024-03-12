@@ -25,11 +25,6 @@ variable "alb-security-group_config" {
   })
 }
 
-variable "vpc_id" {
-    type = string
-}
-
-
 variable "bastion-security-group_config" {
   type = object({
     name        = string
