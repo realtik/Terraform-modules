@@ -1,5 +1,5 @@
 # create security group for the application load balancer
-resource "aws_security_group" "alb_security_group" {
+resource "aws_security_group" "alb-security_group" {
   name        = var.alb-security-group_config.name
   description = var.alb-security-group_config.description
   vpc_id      = var.vpc_id
@@ -33,7 +33,7 @@ resource "aws_security_group" "alb_security_group" {
 }
 
 # create security group for the bastion host aka jump box
-resource "aws_security_group" "bastion_security_group" {
+resource "aws_security_group" "bastion-security_group" {
   name        = var.bastion-security-group_config.name
   description = var.bastion-security-group_config.description
   vpc_id      = var.vpc_id
