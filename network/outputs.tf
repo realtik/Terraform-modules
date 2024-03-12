@@ -2,6 +2,10 @@ output "vpc_id" {
   value = aws_vpc.vpc.id
 }
 
+output "internet-gateway_id" {
+  value = aws_internet_gateway.internet-gateway.id
+}
+
 ################ PUBLIC SUBNET ID ############################
 
 output "public-subnet-1_id" {
