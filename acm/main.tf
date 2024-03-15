@@ -4,7 +4,7 @@ resource "aws_acm_certificate" "acm_certificate" {
   validation_method         = var.acm_certificate_config.validation_method
 
   lifecycle {
-    create_before_destroy = var.acm_certificate_config.create_before_destroy
+    create_before_destroy = true
   }
 }
 
