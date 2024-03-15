@@ -27,7 +27,7 @@ resource "aws_db_instance" "rds_instance" {
 }
 
 
-/*
+/* RESTAURATION DEPUIS UN SNAPSHOT AVEC CREATION DU SECURITY GROUP
 # RDS security group
 resource "aws_security_group" "rds_security_group" {
   name        = var.rds-security-group_config.name
