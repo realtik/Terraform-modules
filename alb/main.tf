@@ -18,7 +18,7 @@ resource "aws_lb_target_group" "alb_target_group" {
   target_type = var.alb_target_group_config.target_type
   port        = var.alb_target_group_config.port
   protocol    = var.alb_target_group_config.protocol
-  vpc_id      = [var.vpc_id]
+  vpc_id      = var.vpc_id
 
   health_check {
     healthy_threshold   = var.alb_target_group_config.healthy_threshold
@@ -39,7 +39,7 @@ resource "aws_lb_listener" "alb_http_listener" {
   protocol          = var.alb_http_listener_config.protocol
 
   default_action {
-    type = var.alb_http_listener_config.redirect
+    type = var.alb_http_listener_config.type
 
     redirect {
       port        = var.alb_http_listener_config.redirect_port
