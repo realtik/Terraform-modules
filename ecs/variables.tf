@@ -22,7 +22,7 @@ variable "ecs_task_definition_config" {
     cpu_architecture           = string
     container_definitions_name = string
     image                      = string
-    essential                  = string
+    essential                  = bool
     containerPort              = string
     hostPort                   = string
     type                       = string
