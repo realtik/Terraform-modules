@@ -23,8 +23,8 @@ variable "ecs_task_definition_config" {
     container_definitions_name = string
     image                      = string
     essential                  = bool
-    containerPort              = string
-    hostPort                   = string
+    containerPort              = number
+    hostPort                   = number
     type                       = string
     awslogs-region             = string
     awslogs-stream-prefix      = string
