@@ -11,25 +11,25 @@ variable "alb_target_group_config" {
   type = object({
     name                = string
     target_type         = string
-    port                = string
+    port                = number
     protocol            = string
-    healthy_threshold   = string
-    interval            = string
+    healthy_threshold   = number
+    interval            = number
     matcher             = string
     path                = string
     ht_port             = string
     ht_protocol         = string
-    timeout             = string
-    unhealthy_threshold = string
+    timeout             = number
+    unhealthy_threshold = number
   })
 }
 
 variable "alb_http_listener_config" {
   type = object({
-    port              = string
+    port              = number
     protocol          = string
     type              = string
-    redirect_port     = string
+    redirect_port     = number
     redirect_protocol = string
     status_code       = string
   })
@@ -37,7 +37,7 @@ variable "alb_http_listener_config" {
 
 variable "alb_https_listener_config" {
   type = object({
-    port              = string
+    port              = number
     protocol          = string
     ssl_policy        = string
     type              = string
