@@ -16,14 +16,16 @@ variable "rds_instance_config" {
 
 }
 
+
+
 variable "database_security_group_id" {
     type = string
 }
 
-variable "private_subnet1_id" {
+variable "private-subnet-3_id" {
   type = string
 }
 
-variable "private_subnet2_id" {
+variable "private-subnet-4_id" {
   type = string
 }

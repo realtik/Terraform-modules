@@ -2,7 +2,7 @@
 #rds subnet
 resource "aws_db_subnet_group" "rds_subnet_group" {
   name       = "rds-subnet-group"
-  subnet_ids = [var.private_subnet1_id, var.private_subnet2_id]
+  subnet_ids = [var.private-subnet-3_id, var.private-subnet-4_id]
 }
 #RDS INSTANCE
 resource "aws_db_instance" "rds_instance" {
@@ -27,34 +27,15 @@ resource "aws_db_instance" "rds_instance" {
 }
 
 
-/* RESTAURATION DEPUIS UN SNAPSHOT AVEC CREATION DU SECURITY GROUP
-# RDS security group
-resource "aws_security_group" "rds_security_group" {
-  name        = var.rds-security-group_config.name
-  description = var.rds-security-group_config.description
-  vpc_id      = var.vpc_id
-
-  ingress {
-    from_port   = var.rds-security-group_config.ingress_from_port
-    to_port     = var.rds-security-group_config.ingress_to_port
-    protocol    = var.rds-security-group_config.ingress_protocol
-    cidr_blocks = var.rds-security-group_config.ingress_cidr_blocks
-  }
-
-  tags = {
-    Name = "RDS Security Group"
-  }
-}
-
-*/
-/*# create database subnet group
+/*
+# create database subnet group
 resource "aws_db_subnet_group" "database_subnet_group" {
-  name        = "${}-${}-database-subnets"
-  subnet_ids  = 
+  name        = "rds-subnet-group"
+  subnet_ids  = [var.private-subnet-3_id, var.private-subnet-4_id]
   description = "subnets for database instance"
 
   tags = {
-    Name = "${}-${}-database-subnets"
+    Name = "database subnet"
   }
 }
 
@@ -75,4 +56,5 @@ resource "aws_db_instance" "database_instance" {
   db_subnet_group_name   = 
   multi_az               = 
   vpc_security_group_ids = 
-}*/
+}
+*/
