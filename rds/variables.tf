@@ -1,4 +1,4 @@
-variable "rds_instance_config" {
+/*variable "rds_instance_config" {
   type = object({
     engine                    = string
     availability_zone         = string
@@ -15,9 +15,23 @@ variable "rds_instance_config" {
   })
 
 }
+*/
 
+variable "snapshot_config" {
+  type = object({
+    db_snapshot_identifier = string
+    snapshot_type = string
+  })
+}
 
-
+variable "rds_instance_config" {
+  type = object({
+    instance_class            = string
+    availability_zone         = string
+    identifier                = string
+    multi_az                  = string
+  })
+}
 variable "database_security_group_id" {
     type = string
 }
