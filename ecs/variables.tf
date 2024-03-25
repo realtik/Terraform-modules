@@ -25,7 +25,6 @@ variable "ecs_task_definition_config" {
     essential                  = bool
     containerPort              = number
     hostPort                   = number
-    type                       = string
     awslogs-region             = string
     awslogs-stream-prefix      = string
   })
