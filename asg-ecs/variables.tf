@@ -25,5 +25,5 @@ variable "ecs_service_name" {
 }
 
 variable "ecs_service" {
-  type = string
+  type = any
 }
